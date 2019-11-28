@@ -42,3 +42,7 @@ Result will be like this:
 }
 ```
 
+## Misc
+It "remembers about the history" in every node **ON PURPOSE**. \
+Another version is coming with an option to turn it off. _(Need For Time ™)_
+
