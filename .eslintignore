@@ -1,6 +1,6 @@
-.idea
-node_modules
-flow-typed
-ts-build
-babel-build
-dist
+/.idea
+/node_modules
+/flow-typed
+/ts-build
+/babel-build
+/dist

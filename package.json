@@ -1,7 +1,9 @@
 {
   "name": "js-bin-tree",
   "description": "An implementation of binary trees for JS.",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/atesztoth/js-binary-tree"
@@ -14,7 +16,8 @@
     "showcase-ts": "rimraf ts-build && tsc && node ./ts-build/example/bin-tree-builder-example.js",
     "build-babel": "rimraf babel-build && babel src/flow --out-dir babel-build --source-maps",
     "prepublish": "rimraf publish-build && tsc src/ts/bintree.ts -outDir dist",
-    "lint": "eslint . "
+    "lint": "eslint . ",
+    "lint:fix": "eslint . --fix"
   },
   "license": "ISC",
   "main": "dist/bintree.js",
@@ -38,6 +41,7 @@
     "flow": "^0.2.3",
     "flow-bin": "^0.112.0",
     "flow-typed": "^2.6.2",
+    "husky": "^3.1.0",
     "nodemon": "^2.0.1",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",

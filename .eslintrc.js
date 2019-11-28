@@ -19,6 +19,5 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module"
-  },
-  ignorePatterns: ["*flow.js", "dist", "ts-build", "babel-build"]
+  }
 }
