@@ -1,7 +1,7 @@
 // @flow strict
 
 import type { TreeCutter } from './bintree.flow'
-import { binTreeBuilder } from './bintree.flow'
+import { rememberingTree } from './bintree.flow'
 
 type ValueTypes = string | number
 
@@ -12,6 +12,6 @@ const cutters: TreeCutter<ValueTypes, ValueTypes>[] = [
   { drive: ['AWD', 'AWD'] },
   { color: ['black', 'blue'] }
 ]
-const tree = binTreeBuilder(cutters, { manufacturer: 'Tesla' })
+const tree = rememberingTree(cutters, { manufacturer: 'Tesla' })
 
 console.info(JSON.stringify(tree, null, 2))
