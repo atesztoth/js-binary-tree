@@ -10,10 +10,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev-ts": "rimraf ts-build && tsc --watch",
-    "dev-babel": "nodemon --exec babel-node babel-build/example-flow.js",
     "build-ts": "rimraf ts-build && tsc",
     "showcase-ts": "rimraf ts-build && tsc && node ./ts-build/example/bin-tree-builder-example.js",
-    "build-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps",
+    "build-babel": "rimraf babel-build && babel src/flow --out-dir babel-build --source-maps",
     "prepublish": "rimraf publish-build && tsc src/ts/bintree.ts -outDir dist",
     "lint": "eslint . "
   },
