@@ -9,7 +9,7 @@
     "@babel/preset-flow"
   ],
   "plugins": ["@babel/plugin-proposal-nullish-coalescing-operator"],
-  "ignore": ["node-modules", "ts-build", "babel-build", "flow-typed"],
+  "ignore": ["node-modules", "ts-build", "babel-build", "flow-typed", "dist"],
   "compact": true,
   "sourceRoot": ".",
   "comments": false

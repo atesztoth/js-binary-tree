@@ -1,4 +1,4 @@
-import { binTreeBuilder, TreeCutter } from '../bintree'
+import { binTreeBuilder, TreeCutter } from '../src/ts/bintree'
 
 type ValueTypes = string | number
 

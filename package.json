@@ -1,11 +1,24 @@
 {
+  "name": "js-bin-tree",
+  "description": "An implementation of binary trees for JS.",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atesztoth/js-binary-tree"
+  },
+  "author": "Attila Tóth",
+  "version": "1.0.0",
   "scripts": {
-    "dev-ts": "tsc --watch",
-    "dev-babel": "nodemon --exec babel-node src/server.js",
+    "dev-ts": "rimraf ts-build && tsc --watch",
+    "dev-babel": "nodemon --exec babel-node babel-build/example-flow.js",
     "build-ts": "rimraf ts-build && tsc",
     "showcase-ts": "rimraf ts-build && tsc && node ./ts-build/example/bin-tree-builder-example.js",
-    "build-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps"
+    "build-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps",
+    "prepublish": "rimraf publish-build && tsc src/ts/bintree.ts -outDir dist",
+    "lint": "eslint . "
   },
+  "license": "ISC",
+  "main": "dist/bintree.js",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.7.4",

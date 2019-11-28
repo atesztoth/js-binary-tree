@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": false,
@@ -10,7 +10,7 @@
     "alwaysStrict": true,
     "esModuleInterop": true,
     "outDir": "./ts-build",
-    "baseUrl": "."
+    "baseUrl": "src"
   },
-  "exclude": ["node_modules", "ts-build", "babel-build"]
+  "exclude": ["node_modules", "ts-build", "babel-build", "dist"]
 }
