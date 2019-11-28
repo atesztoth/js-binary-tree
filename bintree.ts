@@ -11,10 +11,11 @@ export const binTreeBuilder = <T extends {}, U = any, V = any>(
   prevNode: T,
   cutterParam?: { [k: string]: U | V }
 ): BinTree<T> | null => {
-  if (cutters.length < 1) return null
+  if (cutters.length < 1 && !cutterParam) return null
   const [[k, v]] = Object.entries(cutterParam ?? [null, null])
-  const [[newKey, [v1, v2]]] = Object.entries(cutters[0])
   const node = { ...prevNode, ...(v ? { [k]: v } : {}) }
+  if (cutters.length < 1) return { node }
+  const [[newKey, [v1, v2]]] = Object.entries(cutters[0])
   return {
     node,
     left: binTreeBuilder(cutters.slice(1), node, { [newKey]: v1 }) ?? undefined,

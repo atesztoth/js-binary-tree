@@ -15,8 +15,9 @@ export const binTreeBuilder = <T: {}, U = any, V = any>(
 ): BinTree<T> | null => {
   if (cutters.length < 1) return null
   const [[k, v]] = Object.entries(cutterParam ?? [null, null])
-  const [[newKey, [v1, v2]]] = ((Object.entries(cutters[0]): any): [[string, [U | V, U | V]]])
   const node = { ...prevNode, ...(v ? { [k]: v } : {}) }
+  if (cutters.length < 1) return { node }
+  const [[newKey, [v1, v2]]] = ((Object.entries(cutters[0]): any): [[string, [U | V, U | V]]])
   return {
     node,
     left: binTreeBuilder(cutters.slice(1), node, { [newKey]: v1 }) ?? undefined,
