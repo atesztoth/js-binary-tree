@@ -1,7 +1,7 @@
 // @flow strict
 
-import type { TreeCutter } from '../src/flow/bintree.flow'
-import { binTreeBuilder } from '../src/flow/bintree.flow'
+import type { TreeCutter } from './bintree.flow'
+import { binTreeBuilder } from './bintree.flow'
 
 type ValueTypes = string | number
 
