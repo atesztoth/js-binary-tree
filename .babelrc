@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-flow"
+  ],
+  "plugins": [],
+  "ignore": ["node_modules", "build"],
+  "comments": false
+}

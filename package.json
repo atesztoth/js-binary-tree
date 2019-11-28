@@ -1,12 +1,28 @@
 {
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "showcase": "yarn build && node ./dist/example/bin-tree-builder-example.js"
+  },
   "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-flow": "^7.7.4",
     "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-flowtype": "^4.5.2",
     "eslint-plugin-prettier": "^3.1.1",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.112.0",
+    "flow-typed": "^2.6.2",
     "prettier": "^1.19.1",
     "typescript": "^3.7.2"
   }
