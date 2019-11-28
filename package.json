@@ -15,7 +15,7 @@
     "build-ts": "rimraf ts-build && tsc",
     "showcase-ts": "rimraf ts-build && tsc && node ./ts-build/example/bin-tree-builder-example.js",
     "build-babel": "rimraf babel-build && babel src/flow --out-dir babel-build --source-maps",
-    "prepublish": "rimraf publish-build && tsc src/ts/bintree.ts -outDir dist",
+    "prepare": "rimraf publish-build ts-build babel-build && tsc src/ts/bintree.ts -outDir dist",
     "lint": "eslint . ",
     "lint:fix": "eslint . --fix"
   },
