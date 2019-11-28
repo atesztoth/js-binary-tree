@@ -1,4 +1,5 @@
 // @flow strict
+
 export interface BinTree<T> {
   node: T;
   left?: ?BinTree<T>;

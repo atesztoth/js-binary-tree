@@ -1,4 +1,4 @@
 [ignore]
-.*/build/.*
-.*/dist/.*
+.*/ts-build/.*
+.*/babel-build/.*
 ./*.ts

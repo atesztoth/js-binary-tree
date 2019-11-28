@@ -1,14 +1,18 @@
 {
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "showcase": "yarn build && node ./dist/example/bin-tree-builder-example.js"
+    "dev-ts": "tsc --watch",
+    "dev-babel": "nodemon --exec babel-node src/server.js",
+    "build-ts": "rimraf ts-build && tsc",
+    "showcase-ts": "rimraf ts-build && tsc && node ./ts-build/example/bin-tree-builder-example.js",
+    "build-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps",
+    "showcase-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps && node ./babel-build/example-flow.js"
   },
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-flow": "^7.7.4",
     "@types/node": "^12.12.14",
@@ -23,7 +27,9 @@
     "flow": "^0.2.3",
     "flow-bin": "^0.112.0",
     "flow-typed": "^2.6.2",
+    "nodemon": "^2.0.1",
     "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
     "typescript": "^3.7.2"
   }
 }

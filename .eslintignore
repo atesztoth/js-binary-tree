@@ -1,5 +1,5 @@
 .idea
-dist
 node_modules
 flow-typed
-build
+ts-build
+babel-build

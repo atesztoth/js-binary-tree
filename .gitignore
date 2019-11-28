@@ -2,5 +2,5 @@
 .vscode
 *DS_store
 node_modules
-dist
-build
+ts-build
+babel-build

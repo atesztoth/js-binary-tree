@@ -1,16 +1,10 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "node": "current"
-        }
-      }
-    ],
+    "@babel/preset-env",
     "@babel/preset-flow"
   ],
-  "plugins": [],
-  "ignore": ["node_modules", "build"],
+  "plugins": ["@babel/plugin-proposal-nullish-coalescing-operator"],
+  "ignore": ["node_modules", "ts-build", "babel-build", "dist", "*.ts", "flow-typed"],
+  "compact": true,
   "comments": false
 }
