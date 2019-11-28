@@ -4,8 +4,7 @@
     "dev-babel": "nodemon --exec babel-node src/server.js",
     "build-ts": "rimraf ts-build && tsc",
     "showcase-ts": "rimraf ts-build && tsc && node ./ts-build/example/bin-tree-builder-example.js",
-    "build-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps",
-    "showcase-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps && node ./babel-build/example-flow.js"
+    "build-babel": "rimraf babel-build && babel example --out-dir babel-build --source-maps"
   },
   "dependencies": {},
   "devDependencies": {
