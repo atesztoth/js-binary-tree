@@ -1,3 +1,5 @@
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 # js-binary-tree
 
 Implementation of a binary tree with both TS and flow support.
@@ -45,4 +47,7 @@ Result will be like this:
 ## Misc
 It "remembers about the history" in every node **ON PURPOSE**. \
 Another version is coming with an option to turn it off. _(Need For Time ™)_
+
+## Support
+You can find implementations for both Typescript and FlowJS.
 
