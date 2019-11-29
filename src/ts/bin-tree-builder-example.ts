@@ -7,7 +7,9 @@ const cutters: TreeCutter<ValueTypes, ValueTypes>[] = [
   { '0-60': [2.4, 3.2] },
   { range: [373, 322] },
   { drive: ['AWD', 'AWD'] },
-  { color: ['black', 'blue'] }
+  { color: [null, 'blue'] },
+  { age: [1, 0] },
+  { isWrecked: ['no', 'no'] }
 ]
 const tree = rememberingTree(cutters, { manufacturer: 'Tesla' })
 

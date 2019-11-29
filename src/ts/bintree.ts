@@ -17,7 +17,7 @@ export const rememberingTree = <T extends {}, U = any, V = any>(
   const [[newKey, [v1, v2]]] = Object.entries(cutters[0])
   return Object.assign(
     { node },
-    v1 ? { left: rememberingTree(cutters.slice(1), node, { [newKey]: v1 }) ?? undefined } : {},
-    v2 ? { right: rememberingTree(cutters.slice(1), node, { [newKey]: v2 }) ?? undefined } : {}
+    !!v1 ? { left: rememberingTree(cutters.slice(1), node, { [newKey]: v1 }) ?? undefined } : {},
+    !!v2 ? { right: rememberingTree(cutters.slice(1), node, { [newKey]: v2 }) ?? undefined } : {}
   )
 }
