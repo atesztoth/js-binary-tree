@@ -10,7 +10,8 @@
     "alwaysStrict": true,
     "esModuleInterop": true,
     "outDir": "./ts-build",
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "removeComments": true
   },
   "exclude": ["node_modules", "ts-build", "babel-build", "dist"]
 }
